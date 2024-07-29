@@ -1,6 +1,6 @@
 package cn.bugstack.config;
 
-import cn.bugstack.infrastructure.gateway.IWeixinApiService;
+import cn.bugstack.service.weixin.IWeixinApiService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
