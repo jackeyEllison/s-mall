@@ -8,6 +8,7 @@ import cn.bugstack.domain.res.PayOrderRes;
 import cn.bugstack.domain.vo.ProductVO;
 import cn.bugstack.service.IOrderService;
 import cn.bugstack.service.rpc.ProductRPC;
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
@@ -93,7 +94,7 @@ public class OrderServiceImpl implements IOrderService {
         orderDao.changeOrderPaySuccess(payOrderReq);
 
         // 发送MQ消息
-        eventBus.post(payOrderReq);
+        eventBus.post(JSON.toJSONString(payOrderReq));
     }
 
     @Override
