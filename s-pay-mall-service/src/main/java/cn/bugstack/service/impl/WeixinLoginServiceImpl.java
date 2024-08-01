@@ -8,6 +8,7 @@ import cn.bugstack.service.ILoginService;
 import cn.bugstack.service.weixin.IWeixinApiService;
 import com.google.common.cache.Cache;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 import retrofit2.Call;
 
 import javax.annotation.Resource;
@@ -20,6 +21,7 @@ import java.util.Map;
  * @description 微信服务
  * @create 2024-08-01 08:27
  */
+@Service
 public class WeixinLoginServiceImpl implements ILoginService {
 
     @Value("${weixin.config.app-id}")
