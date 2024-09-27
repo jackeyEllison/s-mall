@@ -1,6 +1,6 @@
 /**
  * @description
  * @author Fuzhengwei bugstack.cn @小傅哥
- * @create 2024-07-30 07:22
+ * @create 2024-09-27 17:01
  */
-package cn.bugstack.listener;
+package cn.bugstack.common;
