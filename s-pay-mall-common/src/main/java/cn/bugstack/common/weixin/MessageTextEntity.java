@@ -1,4 +1,4 @@
-package cn.bugstack.common;
+package cn.bugstack.common.weixin;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
@@ -23,7 +23,7 @@ public class MessageTextEntity {
     @XStreamAlias("EventKey")
     private String eventKey;
 
-    @XStreamAlias("MsgId")
+    @XStreamAlias("MsgID")
     private String msgId;
 
     @XStreamAlias("Status")
