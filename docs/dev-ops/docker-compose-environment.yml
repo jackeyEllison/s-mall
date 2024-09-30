@@ -1,7 +1,8 @@
-# 命令执行 docker-compose up -d
-# 云服务器；https://618.gaga.plus
+# 命令执行 docker-compose -f docker-compose-environment.yml up -d
+# 云服务器；https://618.gaga.plus 本项目2c2g可云服务器部署
 version: '3.9'
 services:
+  # mysql
   mysql:
     image: mysql:8.0.32
     container_name: mysql
@@ -13,7 +14,7 @@ services:
     ports:
       - "13306:3306"
     volumes:
-      - ./sql:/docker-entrypoint-initdb.d
+      - ./mysql/sql:/docker-entrypoint-initdb.d
     healthcheck:
       test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
       interval: 5s
