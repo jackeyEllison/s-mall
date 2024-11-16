@@ -27,7 +27,18 @@ public class LoginServiceTest {
     public void test() throws IOException {
         // openid，你要让谁接收到模板消息
         // ticket，测试时候可以随意发
-        loginService.saveLoginState("111","111");
+        loginService.saveLoginState("111", "111");
+    }
+
+    @Test
+    public void test_createQrCodeTicket() throws Exception {
+        log.info("qrCodeTicket:{}", loginService.createQrCodeTicket());
+        log.info("qrCodeTicket:{}", loginService.createQrCodeTicket());
+        log.info("qrCodeTicket:{}", loginService.createQrCodeTicket());
+        // gQGe7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyMnFNbW9KTDBjckcxc2hQdmhEMWQAAgQRZjhnAwQAjScA
+        // gQHv7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyWkZETG81TDBjckcxc0dQdk5EMXcAAgQqZjhnAwQAjScA
+        // gQHG7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyNGJCRG9STDBjckcxc0ZQdnhEMW8AAgQpZjhnAwQAjScA
+        // gQHY7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyZzl0Vm9UTDBjckcxc0ZQdk5EMTcAAgQpZjhnAwQAjScA
     }
 
 }
